@@ -1,0 +1,10 @@
+Springboot集成Clickhouse附完整代码和测试数据。
+1：application.properties中配置mongodb相关的连接信息
+
+2.执行一下数据库的sql:
+create table order(id UInt32,sku_id String,total_amount Decimal(16,2),create_time Datetime) engine =MergeTree partition by toYYYYMMDD(create_time) primary key (id) order by (id,sku_id);
+
+3:启动ClickHouseApplication
+
+csdn博客地址：
+https://blog.csdn.net/u010797364/article/details/120450654
